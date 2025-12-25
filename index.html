@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kiruthika Muralidharan Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /* About Section - Dark theme */
+      #about-section {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 6rem 0;
+      }
+      .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .about-row {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 4rem;
+      }
+      .about-photo {
+        flex: 0 0 280px;
+      }
+      .about-photo img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      }
+      .about-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+      }
+      .about-content p {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      .skills-section {
+        margin-top: 3rem;
+      }
+      .skills-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      .skill-item {
+        margin-bottom: 1.8rem;
+      }
+      .skill-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+      .progress-track {
+        height: 20px;
+        background-color: #333333;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        background-color: #ffbd39;
+        border-radius: 10px;
+        transition: width 2s ease-in-out;
+      }
+
+      /* Alignment for detailed skills */
+      .skills-detail-item {
+        display: flex;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+      }
+      .skills-detail-label {
+        font-weight: bold;
+        width: 140px;
+        flex-shrink: 0;
+      }
+      .skills-detail-content {
+        flex: 1;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 992px) {
+        .about-row {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-photo {
+          margin: 0 auto;
+        }
+        .skills-detail-item {
+          flex-direction: column;
+        }
+        .skills-detail-label {
+          width: auto;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      #typing-animation {
+        color: #ffbd39;
+        font-size: 32px;
+      }
+
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Kiruthika Muralidharan</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.jpeg);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Kiruthika Muralidharan</span></h1>
+                  <span id="typing-animation"></span>
+                  <script>
+                    const typingAnimationElement = document.getElementById('typing-animation');
+                    const typingTexts = [
+                      'Data Analyst ',
+                      'Aspiring Data Scientist ',
+                      'Business Analytics Enthusiast '
+                    ];
+                    function playTypingAnimation(text) {
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => { typingAnimationElement.textContent += text[i]; }, i * 150);
+                      }
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 150 + 2000);
+                    }
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
+                  <br><br>
+                  <h2>Insights & Analytics Specialist</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="about-section">
+      <div class="about-container">
+        <div class="about-row ftco-animate">
+          <div class="about-photo">
+            <img src="images/about-me.jpeg" alt="Kiruthika Muralidharan">
+          </div>
+          <div class="about-content">
+            <h1>Kiruthika Muralidharan</h1>
+            <p><strong>Job Role:</strong> Quality Assurance Engineer</p>
+            <p><strong>Experience:</strong> 3 Years 5 Months</p>
+            <p><strong>Address:</strong> Bengaluru, India</p>
+
+            <div class="skills-section">
+              <h3>Skills</h3>
+              <div class="skill-item">
+                <div class="skill-name"><span>SQL</span><span>95%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>PYTHON</span><span>85%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Data Visualization</span><span>90%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Statistical Analysis</span><span>85%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Machine Learning</span><span>80%</span></div>
+                <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <p>2 Projects completed</p>
+              <p><a href="https://www.linkedin.com/in/kiruthika-muralidharan/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5 ftco-animate">
+          <div class="col-12">
+            <p>Aspiring to be a Data Scientist with a strong focus on Business Analytics, currently pursuing a Master of Science in Data Science & Analytics. I am skilled in data analysis, visualization, and predictive modeling, with experience in real-world projects. Seeking opportunities to apply data-driven insights for strategic decision-making and organizational growth.</p>
+            
+            <div class="mt-4">
+              <div class="skills-detail-item">
+                <div class="skills-detail-label">Languages:</div>
+                <div class="skills-detail-content">Python, R, SQL, Basic Java</div>
+              </div>
+              <div class="skills-detail-item">
+                <div class="skills-detail-label">Data & Tools:</div>
+                <div class="skills-detail-content">Tableau, Power BI, Excel, Git, JIRA, Postman, Swagger,<br>Selenium, FileZilla, WinSCP</div>
+              </div>
+              <div class="skills-detail-item">
+                <div class="skills-detail-label">ML:</div>
+                <div class="skills-detail-content">Predictive Analytics, Time-Series Forecasting (SARIMA, Holt-Winters), K-Means Clustering, Neural Networks, Linear<br>Regression, Data Modeling, Feature Engineering, Model<br>Evaluation (MAPE/Accuracy)</div>
+              </div>
+              <div class="skills-detail-item">
+                <div class="skills-detail-label">Databases:</div>
+                <div class="skills-detail-content">SQL, MySQL, MongoDB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Data Scientist specializing in predictive modeling, business analytics, and scalable data solutions. Designed production-grade demand forecasting frameworks using SARIMA and Holt-Winters, achieving a 1.48% MAPE and projecting $194K in annual savings. Strong foundation in building ML pipelines for customer segmentation and pricing analysis, serving data-driven insights to senior leadership with sub-second query performance.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2025 – Present</span>
+              <h2>Graduate Research Assistant</h2>
+              <span class="position">Bradley University, Peoria, IL</span>
+              <p class="mt-4">
+                <ul>
+                  <li>Collected, cleaned, and analyzed large-scale research datasets using Python, R, and SQL, ensuring data accuracy and reproducibility.</li>
+                  <li>Performed statistical analysis and predictive modeling to identify trends, supporting faculty research and conference presentations.</li>
+                  <li>Created interactive dashboards in Tableau/Power BI to visualize key findings for cross-departmental research teams.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2021-2024</span>
+              <h2>Quality Assurance Engineer</h2>
+              <span class="position">Concentrix</span>
+              <p class="mt-4">
+                <ul>
+                  <li>Collaborated with cross-functional teams in an Agile environment, defining data requirements, performing API testing (Postman/Swagger), and ensuring data integrity for critical projects.</li>
+                  <li>Led a cross-functional team of 4 members and collaborated with business stakeholders to define data requirements and analysis, actively participating in Agile ceremonies to deliver actionable insights that informed key decisions.</li>
+                  <li>Built interactive dashboards and visualizations with tools like Google Analytics and Excel to track key performance metrics and present findings to senior leadership.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2020-2021</span>
+              <h2>Associate Software Engineer</h2>
+              <span class="position">Test Yantra</span>
+              <p class="mt-4">
+                <ul>
+                  <li>Analyzed and interpreted complex business data, conducted research, and generated reports to deliver actionable insights that solved key data challenges.</li>
+                  <li>Collaborated with cross-functional teams in an Agile-Scrum environment, ensuring the timely and accurate delivery of data analysis projects from requirements to final reporting.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2024-2026</span>
+              <h2>Master of Science in Data Science & Analytics</h2>
+              <span class="position">Bradley University, Peoria, IL, USA</span>
+              <p class="mt-4">Grade: 3.88/4.0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="https://drive.google.com/file/d/1QtEJpFymoh06MdPAl5198lUPyC2VsGEA/view?usp=sharing" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are my 2 completed academic data analytics and forecasting projects from Bradley University.</p>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+
+          <div class="col-md-5 d-flex ftco-animate mb-5">
+            <div class="blog-entry justify-content-end w-100">
+              <a class="block-20 zoom-effect" style="background-image: url('images/uber-cover.jpg');"></a>
+              <div class="text mt-3 p-4 bg-white">
+                <h3 class="heading mb-3" style="font-size: 1.6rem; font-weight: 700; color: #222;">
+                  Analysis of New York City Uber Booking Proceeds
+                </h3>
+                <p>Analyzed 100k+ Uber trips using Neural Networks and K-Means clustering. Identified high-value ride segments and pricing insights for driver retention and revenue optimization.</p>
+                <a href="https://drive.google.com/file/d/YOUR_UBER_LINK/view?usp=sharing" target="_blank" class="btn btn-primary py-2 px-4">Download Full Report</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 d-flex ftco-animate mb-5">
+            <div class="blog-entry justify-content-end w-100">
+              <a class="block-20 zoom-effect" style="background-image: url('images/skateboard-cover.jpg');"></a>
+              <div class="text mt-3 p-4 bg-white">
+                <h3 class="heading mb-3" style="font-size: 1.6rem; font-weight: 700; color: #222;">
+                  Model Selection-Driven Demand Forecasting and Inventory Optimization
+                </h3>
+                <p>Compared SARIMA and Holt-Winters models on seasonal skateboard sales. Achieved 1.48% MAPE and projected $194K in inventory cost savings through MRP integration.</p>
+                <a href="https://drive.google.com/file/d/YOUR_SKATEBOARD_LINK/view?usp=sharing" target="_blank" class="btn btn-primary py-2 px-4">Download Full Report</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+        <div class="row d-flex contact-info mb-5 justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="icon-map-signs"></span></div>
+              <h3 class="mb-4">Address</h3>
+              <p>Peoria, IL</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="icon-phone2"></span></div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel:+13095858428">+1 309 585 8428</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="icon-paper-plane"></span></div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:kmuralidharan@mail.bradley.edu">kmuralidharan@mail.bradley.edu</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center"><span class="icon-download"></span></div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="https://drive.google.com/file/d/1QtEJpFymoh06MdPAl5198lUPyC2VsGEA/view?usp=sharing" target="_blank">Download CV</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
